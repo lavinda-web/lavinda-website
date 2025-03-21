@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lavinda Eye Specialist Hospital</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap 4 CSS (CDN) -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+
+  <!-- Additional CSS for styling (optional classes) -->
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .navbar-brand {
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .hero-slider {
+      position: relative;
+    }
+    .hero-slider .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+    .hero-slider .slide-item {
+      position: relative;
+      min-height: 75vh;
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      align-items: center;
+    }
+    .hero-slider .slide-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      padding: 60px 20px;
+    }
+    .hero-slider .slide-content .subheading {
+      display: inline-block;
+      background: #ffc107;
+      color: #000;
+      padding: 5px 10px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .hero-slider .slide-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    .hero-slider .slide-content .btn-hero {
+      background: #ffc107;
+      border: none;
+      color: #000;
+      padding: 12px 30px;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    /* About & Services */
+    .about-section {
+      background: #fff;
+      padding: 60px 0;
+    }
+    .about-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .about-section p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .about-section .img-about {
+      background-size: cover;
+      background-position: center center;
+      min-height: 400px;
+      border-radius: 6px;
+    }
+    /* Stats */
+    .stats-section {
+      background: #f2f2f2;
+      padding: 60px 0;
+    }
+    .stats-section .stat-box {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .stats-section .stat-box h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .stats-section .stat-box span {
+      color: #555;
+      font-size: 0.95rem;
+    }
+    /* CTA Banner */
+    .cta-banner {
+      background: url('images/bg_2.jpg') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      color: #fff;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    .cta-banner .overlay {
+      position: absolute; 
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.4);
+      z-index: 1;
+    }
+    .cta-banner .content {
+      position: relative;
+      z-index: 2;
+      margin: auto;
+      width: 80%;
+      max-width: 600px;
+    }
+    .cta-banner h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .cta-banner .btn-cta {
+      background: #ffc107;
+      border: none;
+      color: #000;
+      font-weight: 600;
+      padding: 12px 30px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    /* Consultation Form (White Background) */
+    .consultation-section {
+      background: #fff;
+      padding: 60px 0;
+      text-align: center;
+      color: #333;
+    }
+    .consultation-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .consultation-section p {
+      margin-bottom: 30px;
+    }
+    .consultation-section .form-control {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      color: #333;
+    }
+    .consultation-section button[type="submit"] {
+      background: #007bff;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px 30px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    /* Blog */
+    .blog-section {
+      background: #fff;
+      padding: 60px 0;
+    }
+    .blog-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .blog-card {
+      background: #fafafa;
+      border: 1px solid #eee;
+      padding: 20px;
+      border-radius: 6px;
+      margin-bottom: 30px;
+      transition: box-shadow 0.2s ease;
+    }
+    .blog-card:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .blog-card .blog-meta {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 10px;
+    }
+    .blog-card h4 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    /* Testimonials */
+    .testimonials-section {
+      background: #f9f9f9;
+      padding: 60px 0;
+    }
+    .testimonials-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .testimonial-item {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .testimonial-item p {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+    .testimonial-item .name {
+      font-weight: 700;
+    }
+    .testimonial-item .position {
+      font-size: 0.85rem;
+      color: #777;
+    }
+    /* Footer */
+    .footer {
+      background: #222;
+      color: #ccc;
+      padding: 40px 0;
+    }
+    .footer h5 {
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .footer a {
+      color: #ccc;
+    }
+    .footer a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer p {
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Lavinda Eye Hospital</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <!-- Updated to link to your actual pages -->
+          <li class="nav-item active"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="client-project.html">CLIENT PROJECT</a></li>
+          <li class="nav-item"><a class="nav-link" href="lavinda-profile.html">LAVINDA PROFILE</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navigation -->
+
+  <!-- Hero Slider -->
+  <div class="hero-slider owl-carousel">
+    <!-- Slide 1 -->
+    <div class="slide-item" style="background-image:url('images/eye.jpeg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="slide-content">
+          <span class="subheading">Your Vision, Our Priority</span>
+          <h1>Leading the Way in Advanced Eye Care</h1>
+          <button class="btn-hero">Our Services</button>
+        </div>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide-item" style="background-image:url('images/eye2.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="slide-content">
+          <span class="subheading">Eye Care Excellence</span>
+          <h1>We Help You Preserve and Restore Sight</h1>
+          <button class="btn-hero">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Hero Slider -->
+
+  <!-- About & Services -->
+  <section class="about-section">
+    <div class="container">
+      <div class="row">
+        <!-- About Image -->
+        <div class="col-md-5 mb-4">
+          <div class="img-about" style="background-image:url('images/eye3.jpg');"></div>
+        </div>
+        <!-- About Text -->
+        <div class="col-md-7">
+          <h2 class="mb-4">Our Mission in Eye Care</h2>
+          <p>
+            Lavinda Eye Specialist Hospital is dedicated to providing exceptional ophthalmic care, leveraging
+            cutting-edge technology and patient-focused treatment. Located in Port Harcourt, Nigeria, we specialize
+            in a wide range of services—from cataract and laser surgeries to comprehensive eye exams and low-vision support.
+          </p>
+          <p>
+            We offer an array of specialized services to help you see the world more clearly. From advanced surgical
+            interventions to preventive care and patient education, we focus on personalized treatments designed
+            to preserve and enhance vision.
+          </p>
+          <p><a href="contact.html" class="btn btn-primary">Contact Us</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 stat-box">
+          <h3 data-number="500">0</h3>
+          <span>Surgeries Completed</span>
+        </div>
+        <div class="col-md-3 stat-box">
+          <h3 data-number="1000">0</h3>
+          <span>Happy Patients</span>
+        </div>
+        <div class="col-md-3 stat-box">
+          <h3 data-number="25">0</h3>
+          <span>Years of Experience</span>
+        </div>
+        <div class="col-md-3 stat-box">
+          <h3 data-number="50">0</h3>
+          <span>Qualified Staff</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>Elevate Your Eye Health Today</h2>
+      <button class="btn-cta">Book Appointment</button>
+    </div>
+  </section>
+
+  <!-- Consultation Form (White Background) -->
+  <section class="consultation-section">
+    <div class="container">
+      <h2>Request A Consultation</h2>
+      <p>Our team is ready to help you preserve and improve your eyesight with the latest technologies and personalized care strategies.</p>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" placeholder="First Name" />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" placeholder="Last Name" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" placeholder="Phone" />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" placeholder="Email" />
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Recent Blog</h2>
+        <p>Stay updated with our latest insights, trends, and expert opinions in advanced eye care.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="blog-card">
+            <div class="blog-meta">Mar 05, 2025 | Admin</div>
+            <h4>LASIK: The Future of Refractive Surgery</h4>
+            <p>Explore the latest advancements in laser therapies for cataracts, glaucoma, and other common vision challenges.</p>
+            <a href="#" class="btn btn-sm btn-info">Read More</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="blog-card">
+            <div class="blog-meta">Feb 20, 2025 | Admin</div>
+            <h4>Importance of Regular Eye Exams</h4>
+            <p>Learn how comprehensive eye exams can detect issues like cataracts, glaucoma, and macular degeneration early, preventing potential vision loss.</p>
+            <a href="#" class="btn btn-sm btn-info">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2>Our Patients Say</h2>
+      <div class="row mt-4">
+        <!-- Testimonial 1 -->
+        <div class="col-md-4">
+          <div class="testimonial-item">
+            <p>
+              "Lavinda’s advanced laser surgery restored my sight beyond expectations. Their staff were incredibly supportive
+              every step of the way. I’m so grateful to have a clearer, brighter future!"
+            </p>
+            <p class="name">- Racky Henderson</p>
+            <p class="position">Patient</p>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="col-md-4">
+          <div class="testimonial-item">
+            <p>
+              "Professional and caring—that’s how I describe Lavinda Eye Specialist Hospital. My glaucoma is well-managed now,
+              and I feel confident I’m receiving world-class treatment right here in Port Harcourt."
+            </p>
+            <p class="name">- Henry Dee</p>
+            <p class="position">Patient</p>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="col-md-4">
+          <div class="testimonial-item">
+            <p>
+              "Thanks to the team at Lavinda, my cataract surgery was smooth and painless. Their modern facilities and empathetic
+              staff made the entire process stress-free. I can finally enjoy reading again!"
+            </p>
+            <p class="name">- Mark Huff</p>
+            <p class="position">Patient</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- Contact Info -->
+        <div class="col-md-3">
+          <h5>Any Questions?</h5>
+          <p>123 Healthcare Ave, Port Harcourt, Nigeria</p>
+          <p>+234 123 4567</p>
+          <p>info@lavindaeyehospital.com</p>
+        </div>
+        <!-- Blog -->
+        <div class="col-md-3">
+          <h5>Recent Blog</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">LASIK: The Future of Refractive Surgery</a></li>
+            <li><a href="#">Importance of Regular Eye Exams</a></li>
+          </ul>
+        </div>
+        <!-- Links -->
+        <div class="col-md-3">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="client-project.html">Client Project</a></li>
+            <li><a href="lavinda-profile.html">Lavinda Profile</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Subscribe -->
+        <div class="col-md-3">
+          <h5>Subscribe!</h5>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control mb-2" placeholder="Enter email address" />
+            </div>
+            <button class="btn btn-primary btn-block">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-12 text-center">
+          <p>&copy; <script>document.write(new Date().getFullYear());</script>
+            All rights reserved |
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery, Bootstrap JS -->
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+    integrity="sha384-LtrjvnR4Twt/qOuYxC+eKnss6rZwz6t2LgDrc/Q0tiXDfUrkPXyrx1F3hKZcFVDM"
+    crossorigin="anonymous">
+  </script>
+
+  <!-- Owl Carousel (for hero slider) -->
+  <script src="js/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // Hero slider
+      $('.hero-slider').owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: false,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        nav: false,
+        dots: true
+      });
+
+      // Animate stats from 0 to final value
+      $('.stat-box h3').each(function(){
+        var $this = $(this);
+        var countTo = $this.attr('data-number');
+        $({ countNum: $this.text() }).animate({
+          countNum: countTo
+        },
+        {
+          duration: 2000,
+          easing: 'linear',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
