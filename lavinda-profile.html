@@ -6,34 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Bootstrap 4 CSS (CDN) -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
 
   <style>
-    /* Set a full-page background image */
+    /* Full-page background image */
     body {
       font-family: Arial, sans-serif;
-      background: url('images/back1.jpg') no-repeat center center fixed;
+      background: url('images/back.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #333;
       margin: 0;
       padding: 0;
     }
+
     a {
       text-decoration: none;
       color: inherit;
     }
+
     .navbar-brand {
       font-weight: 600;
       text-transform: uppercase;
     }
-    /* Content sections use a semi-transparent white background for readability */
+
+    /* Remove white background for content sections */
     .content-section {
-      background: rgba(255, 255, 255, 0.95);
+      background: none; /* No background color */
       border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: none; /* Remove box-shadow if you don't want any */
       margin-bottom: 30px;
       padding: 40px 25px;
     }
+
     .content-section h2 {
       font-size: 1.8rem;
       font-weight: 700;
@@ -42,40 +49,48 @@
       border-left: 4px solid #ffc107;
       padding-left: 10px;
     }
+
     .content-section h3 {
       font-size: 1.3rem;
       margin-top: 20px;
       margin-bottom: 15px;
       color: #0056b3;
     }
+
     .content-section h4 {
       font-size: 1.1rem;
       margin-top: 20px;
       margin-bottom: 10px;
       font-weight: 600;
     }
+
     .content-section p,
     .content-section li {
       line-height: 1.6;
       margin-bottom: 15px;
     }
+
     .content-section ul {
       margin-left: 20px;
     }
+
     /* Image styling */
     .lavinda-image {
       display: block;
       margin: 0 auto 15px auto;
       max-width: 600px;
+      width: 100%;
       height: auto;
       border-radius: 4px;
     }
+
     .image-caption {
       text-align: center;
       font-size: 0.9rem;
       color: #555;
       margin-bottom: 20px;
     }
+
     /* Responsive adjustments */
     @media (max-width: 576px) {
       .content-section {
@@ -97,12 +112,14 @@
     <div class="container">
       <!-- Brand / Logo -->
       <a class="navbar-brand" href="index.html">Lavinda Eye Hospital</a>
+
       <!-- Hamburger button for small screens -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" 
               data-target="#navbarNav" aria-controls="navbarNav" 
               aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <!-- Collapsible Menu Items -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
@@ -141,12 +158,20 @@
     <div class="content-section">
       <h2>EXECUTIVE SUMMARY</h2>
       <p>
-        Lavinda eye specialist hospital is a medical outfit, committed to offering specialized eye care services to our clients in order to promote good vision. It was established in 2007 with a drive to be the best private eye specialist service provider in Nigeria and beyond, in terms of quality, speed and using the best and most efficient technology. Our aim is to offer quality eye care services to improve vision at an affordable cost with state-of-the-art equipment and an optimal service-delivery approach.
+        Lavinda eye specialist hospital is a medical outfit, committed to offering specialized eye care services to our
+        clients in order to promote good vision. It was established in 2007 with a drive to be the best private eye
+        specialist service provider in Nigeria and beyond, in terms of quality, speed and using the best and most
+        efficient technology. Our aim is to offer quality eye care services to improve vision at an affordable cost
+        with state-of-the-art equipment and an optimal service-delivery approach.
       </p>
 
       <h3>INTRODUCTION</h3>
       <p>
-        Lavinda has taken eye care services to a whole new level in Port Harcourt with the acquisition of the most recent eye care technology gadgets and very friendly, competent staff. The hospital has carved a niche in high-quality service delivery since its inception. This has led to sporadic growth in clientele, personnel, and infrastructure. The clientele spans corporate, family, and private patients, with Lavinda currently servicing many corporate interests both in and outside Port Harcourt.
+        Lavinda has taken eye care services to a whole new level in Port Harcourt with the acquisition of the most
+        recent eye care technology gadgets and very friendly, competent staff. The hospital has carved a niche in
+        high-quality service delivery since its inception. This has led to sporadic growth in clientele, personnel, and
+        infrastructure. The clientele spans corporate, family, and private patients, with Lavinda currently servicing
+        many corporate interests both in and outside Port Harcourt.
       </p>
     </div>
 
@@ -154,7 +179,8 @@
     <div class="content-section">
       <h2>OUR SERVICES</h2>
       <p>
-        As an eye care provider dedicated to excellence and accuracy, we offer the following (this list is by no means exhaustive):
+        As an eye care provider dedicated to excellence and accuracy, we offer the following (this list is by no means
+        exhaustive):
       </p>
       <h4>Eye Surgeries</h4>
       <ul>
@@ -165,7 +191,6 @@
         <li>Traumatic eye conditions</li>
         <li>General eye surgeries</li>
       </ul>
-
       <h4>Medical Eye Condition</h4>
       <ul>
         <li>Glaucoma</li>
@@ -175,7 +200,6 @@
         <li>Maculopathies</li>
         <li>Retinopathies</li>
       </ul>
-
       <h4>Optical Services</h4>
       <ul>
         <li>Refraction &amp; Dispensing of Glasses</li>
@@ -192,7 +216,8 @@
     <div class="content-section">
       <h2>EQUIPMENT</h2>
       <p>
-        The hospital is well-equipped with modern ophthalmologic equipment for both diagnosis and treatment of eye conditions. A list of our ophthalmologic equipment:
+        The hospital is well-equipped with modern ophthalmologic equipment for both diagnosis and treatment of eye
+        conditions. A list of our ophthalmologic equipment:
       </p>
       <ul>
         <li>Neon Diamond-YAG laser machine</li>
@@ -219,7 +244,7 @@
       <!-- Equipment Images with styled figures -->
       <h4>OPHTHALMOLOGIST’S OFFICE - WORK STATION</h4>
       <figure>
-        <img 
+        <img
           src="images/picture1.png"
           alt="OPHTHALMOLOGIST’S OFFICE SHOWING WORK STATION EXAMINATION CHAIR"
           class="lavinda-image"
@@ -231,7 +256,7 @@
 
       <h4>OPHTHALMOLOGIST’S OFFICE - TWIN LASER MACHINE</h4>
       <figure>
-        <img 
+        <img
           src="images/picture2.png"
           alt="OPHTHALMOLOGIST’S OFFICE SHOWING TWIN LASER MACHINE"
           class="lavinda-image"
@@ -241,11 +266,11 @@
         </figcaption>
       </figure>
 
-      <h4>OPHTHALMOLOGIST’S OFFICE - AIR PUFF & INDIRECT OPHTHALMOSCOPE</h4>
+      <h4>OPHTHALMOLOGIST’S OFFICE - AIR PUFF &amp; INDIRECT OPHTHALMOSCOPE</h4>
       <figure>
-        <img 
+        <img
           src="images/picture3.png"
-          alt="OPHTHALMOLOGIST’S OFFICE with Air Puff & Indirect Ophthalmoscope"
+          alt="OPHTHALMOLOGIST’S OFFICE with Air Puff &amp; Indirect Ophthalmoscope"
           class="lavinda-image"
         />
         <figcaption class="image-caption">
@@ -255,7 +280,7 @@
 
       <h4>OPTOMETRIST’S OFFICE</h4>
       <figure>
-        <img 
+        <img
           src="images/picture4.png"
           alt="OPTOMETRIST’S OFFICE with digital chart, phoropter, auto-refractor"
           class="lavinda-image"
@@ -267,7 +292,7 @@
 
       <h4>PHACOEMULSIFICATION MACHINE</h4>
       <figure>
-        <img 
+        <img
           src="images/picture5.png"
           alt="Phacoemulsification Machine"
           class="lavinda-image"
@@ -292,7 +317,7 @@
 
     <!-- 6. Reception Overviews, Car Park, etc. -->
     <div class="content-section">
-      <h3>RECEPTION & OTHER OVERVIEWS</h3>
+      <h3>RECEPTION &amp; OTHER OVERVIEWS</h3>
       <figure>
         <img src="images/picture6.png" alt="Reception Overview 1a" class="lavinda-image" />
         <figcaption class="image-caption">RECEPTION OVERVIEW 1a</figcaption>
