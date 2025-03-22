@@ -6,16 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Bootstrap 4 CSS (CDN) -->
-  <!-- Removed 'integrity' & 'crossorigin' to avoid SRI mismatch -->
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-  />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
   <style>
+    /* Set a full-page background image */
     body {
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      background: url('images/back1.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #333;
       margin: 0;
       padding: 0;
@@ -28,8 +26,9 @@
       font-weight: 600;
       text-transform: uppercase;
     }
+    /* Content sections use a semi-transparent white background for readability */
     .content-section {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.95);
       border-radius: 5px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
       margin-bottom: 30px;
@@ -55,7 +54,7 @@
       margin-bottom: 10px;
       font-weight: 600;
     }
-    .content-section p, 
+    .content-section p,
     .content-section li {
       line-height: 1.6;
       margin-bottom: 15px;
@@ -63,8 +62,7 @@
     .content-section ul {
       margin-left: 20px;
     }
-
-    /* Image styling: a max width of 600px, centered, maintaining aspect ratio */
+    /* Image styling */
     .lavinda-image {
       display: block;
       margin: 0 auto 15px auto;
@@ -73,10 +71,22 @@
       border-radius: 4px;
     }
     .image-caption {
-      text-align: center; 
-      font-size: 0.9rem; 
-      color: #555; 
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
       margin-bottom: 20px;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 576px) {
+      .content-section {
+        padding: 30px 15px;
+      }
+      .content-section h2 {
+        font-size: 1.5rem;
+      }
+      .content-section h3 {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
@@ -87,14 +97,12 @@
     <div class="container">
       <!-- Brand / Logo -->
       <a class="navbar-brand" href="index.html">Lavinda Eye Hospital</a>
-
       <!-- Hamburger button for small screens -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" 
               data-target="#navbarNav" aria-controls="navbarNav" 
               aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <!-- Collapsible Menu Items -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
@@ -109,7 +117,7 @@
   
   <!-- Main Container -->
   <div class="container my-4">
-
+    
     <!-- 1. Vision & Mission -->
     <div class="content-section">
       <h2>LAVINDA EYE SPECIALIST HOSPITAL AND LASER CENTRE</h2>
@@ -119,8 +127,8 @@
       </p>
       <h3>OUR MISSION</h3>
       <p>
-        1. To restore good vision to the blind and visually impaired.<br>
-        2. To preserve vision and help to avert blindness. These shall be achieved through:
+        <strong>1.</strong> To restore good vision to the blind and visually impaired.<br>
+        <strong>2.</strong> To preserve vision and help to avert blindness. These shall be achieved through:
       </p>
       <ul>
         <li>Provision of qualitative eye care with modern technology.</li>
@@ -133,22 +141,12 @@
     <div class="content-section">
       <h2>EXECUTIVE SUMMARY</h2>
       <p>
-        Lavinda eye specialist hospital is a medical outfit, committed to offering 
-        specialized eye care services to our clients in order to promote good vision. 
-        It was established in 2007 with a drive to be the best private eye specialist 
-        service providers in Nigeria and beyond the shores of Nigeria, in terms of 
-        quality, speed and using the best and most efficient technology. Our aim is to 
-        offer quality eye care services to improve vision at an affordable cost with 
-        state-of-the-art equipment and very optimal service delivery approach.
+        Lavinda eye specialist hospital is a medical outfit, committed to offering specialized eye care services to our clients in order to promote good vision. It was established in 2007 with a drive to be the best private eye specialist service provider in Nigeria and beyond, in terms of quality, speed and using the best and most efficient technology. Our aim is to offer quality eye care services to improve vision at an affordable cost with state-of-the-art equipment and an optimal service-delivery approach.
       </p>
 
       <h3>INTRODUCTION</h3>
       <p>
-        Lavinda has taken eye care services to a whole new level in the city of Port Harcourt, with the acquisition of 
-        the most recent eye care technology gadgets and very friendly/competent staff. The hospital has carved a niche 
-        in the area of high quality services delivery since inception. This has led to the sporadic growth in clientele, 
-        personnel and infrastructure of the hospital. The clientele of the hospital spans corporate, family and private patients. 
-        Lavinda currently services many corporate interests in Port Harcourt and outside Port Harcourt.
+        Lavinda has taken eye care services to a whole new level in Port Harcourt with the acquisition of the most recent eye care technology gadgets and very friendly, competent staff. The hospital has carved a niche in high-quality service delivery since its inception. This has led to sporadic growth in clientele, personnel, and infrastructure. The clientele spans corporate, family, and private patients, with Lavinda currently servicing many corporate interests both in and outside Port Harcourt.
       </p>
     </div>
 
@@ -156,8 +154,7 @@
     <div class="content-section">
       <h2>OUR SERVICES</h2>
       <p>
-        As an eye care service provider with a hunch for excellence at all times, with accuracy and proper satisfaction 
-        of the client, we offer the underlisted services (this list is by no means exhaustive):
+        As an eye care provider dedicated to excellence and accuracy, we offer the following (this list is by no means exhaustive):
       </p>
       <h4>Eye Surgeries</h4>
       <ul>
@@ -181,10 +178,9 @@
 
       <h4>Optical Services</h4>
       <ul>
-        <li>Refraction</li>
-        <li>Dispensing of glasses</li>
-        <li>Quality frames</li>
-        <li>Quality contact lenses</li>
+        <li>Refraction &amp; Dispensing of Glasses</li>
+        <li>Quality Frames</li>
+        <li>Quality Contact Lenses</li>
       </ul>
       <p>
         Specialized general eye check-up<br>
@@ -196,8 +192,7 @@
     <div class="content-section">
       <h2>EQUIPMENT</h2>
       <p>
-        The hospital is well equipped with modern Ophthalmologic equipment for both diagnosis and treatment of eye conditions. 
-        A list of our Ophthalmologic equipment:
+        The hospital is well-equipped with modern ophthalmologic equipment for both diagnosis and treatment of eye conditions. A list of our ophthalmologic equipment:
       </p>
       <ul>
         <li>Neon Diamond-YAG laser machine</li>
@@ -205,17 +200,15 @@
         <li>Phacoemulsification machine</li>
         <li>Anterior vitrectomy machine</li>
         <li>Digital ophthalmic work station</li>
-        <li>Digital Central visual field Analyzer</li>
+        <li>Digital Central Visual Field Analyzer</li>
         <li>An Automated air puff tonometer for checking eye pressure</li>
         <li>A modern slit lamp Biomicroscope</li>
         <li>An indirect Ophthalmoscope for broad fundal eye examination</li>
         <li>Operation microscope for carrying out eye surgeries</li>
-        <li>A mini side laboratory for tests (Blood sugar level, HIV screening, Urinalysis, etc.)</li>
-        <li>Automated refractometer for refractions</li>
+        <li>A mini in-house laboratory for tests (Blood sugar level, HIV screening, Urinalysis, etc.)</li>
+        <li>Automated refractometer</li>
         <li>A and B ocular ultrasound scan machine</li>
-        <li>Biometric machine</li>
-        <li>Keratometer</li>
-        <li>Phoropter</li>
+        <li>Biometric machine, Keratometer, Phoropter</li>
         <li>Drilling machine</li>
         <li>Frame warmer machine</li>
         <li>Grooving machine</li>
@@ -223,7 +216,7 @@
         <li>Edging machine</li>
       </ul>
 
-      <!-- Images from the PDF (Equipment / Office Overviews) -->
+      <!-- Equipment Images with styled figures -->
       <h4>OPHTHALMOLOGIST’S OFFICE - WORK STATION</h4>
       <figure>
         <img 
@@ -232,7 +225,7 @@
           class="lavinda-image"
         />
         <figcaption class="image-caption">
-          OPHTHALMOLOGIST’S OFFICE SHOWING WORK STATION EXAMINATION CHAIR WITH AIR PUFF NON CONTACT TONOMETRE, INDIRECT OPHTHALMOSCOPE AND SLIT LAMP BIOMICROSPCOPE
+          OPHTHALMOLOGIST’S OFFICE SHOWING WORK STATION EXAMINATION CHAIR WITH AIR PUFF, NON CONTACT TONOMETER, INDIRECT OPHTHALMOSCOPE AND SLIT LAMP BIOMICROSCOPE
         </figcaption>
       </figure>
 
@@ -256,7 +249,7 @@
           class="lavinda-image"
         />
         <figcaption class="image-caption">
-          OPHTHALMOLOGIST’S OFFICE SHOWING WORK STATION EXAMINATION CHAIR WITH AIR PUFF NON CONTACT TONOMETRE AND INDIRECT OPHTHALMOSCOPE
+          OPHTHALMOLOGIST’S OFFICE SHOWING WORK STATION EXAMINATION CHAIR WITH AIR PUFF, NON CONTACT TONOMETER AND INDIRECT OPHTHALMOSCOPE
         </figcaption>
       </figure>
 
@@ -289,125 +282,58 @@
     <div class="content-section">
       <h2>HOSPITAL SETTING</h2>
       <ul>
-        <li><strong>LOCATION:</strong> The Hospital is located in the highbrow and serene environment of the Royal Palm Estate, at no 3 Omubor Close (just after Somitel hotel) off Peter Odili road, Port Harcourt.</li>
-        <li><strong>SECURITY:</strong> The area is well secured with an avalanche of patrolling mobile police men and estate security. There is a mobile police station a few meters from the hospital.</li>
-        <li><strong>CAR PARK:</strong> We have a neat and spacious car park that can take up to 15 cars at once.</li>
-        <li><strong>POWER SUPPLY:</strong> We have a 33KVA power generator for 24-hour guaranteed power supply.</li>
-        <li>The hospital has a spacious and beautiful out-patient reception with comfortable seating, air conditioning, a flat-screen TV, and cable network.</li>
-        <li>Well-equipped air-conditioned consulting rooms with modern diagnostic equipment.</li>
-        <li>Very decent private wards with flat-screen/satellite TV, air conditioner, and good toilet facilities.</li>
-        <li>A modern eye theatre.</li>
-        <li>OPTICAL LABORATORY: well-equipped with modern facilities for fixing lenses and frames. Patients can get their glasses in minutes.</li>
+        <li><strong>LOCATION:</strong> The Hospital is located in the highbrow and serene environment of the Royal Palm Estate, at no 3 Omubor Close (just after Somitel Hotel) off Peter Odili Road, Port Harcourt.</li>
+        <li><strong>SECURITY:</strong> The area is well secured with patrolling mobile police and estate security; a mobile police station is nearby.</li>
+        <li><strong>CAR PARK:</strong> Spacious car park accommodating up to 15 cars.</li>
+        <li><strong>POWER SUPPLY:</strong> A 33KVA generator ensures 24-hour power supply.</li>
+        <li>Air-conditioned outpatient reception with cable TV, equipped consulting rooms, private wards, modern eye theatre, and an optical lab for quick glasses.</li>
       </ul>
     </div>
 
     <!-- 6. Reception Overviews, Car Park, etc. -->
     <div class="content-section">
       <h3>RECEPTION & OTHER OVERVIEWS</h3>
-
       <figure>
-        <img
-          src="images/picture6.png"
-          alt="RECEPTION OVERVIEW 1a"
-          class="lavinda-image"
-        />
-        <figcaption class="image-caption">
-          RECEPTION OVERVIEW 1a
-        </figcaption>
+        <img src="images/picture6.png" alt="Reception Overview 1a" class="lavinda-image" />
+        <figcaption class="image-caption">RECEPTION OVERVIEW 1a</figcaption>
       </figure>
-
       <figure>
-        <img
-          src="images/picture7.png"
-          alt="RECEPTION OVERVIEW 1b"
-          class="lavinda-image"
-        />
-        <figcaption class="image-caption">
-          RECEPTION OVERVIEW 1b
-        </figcaption>
+        <img src="images/picture7.png" alt="Reception Overview 1b" class="lavinda-image" />
+        <figcaption class="image-caption">RECEPTION OVERVIEW 1b</figcaption>
       </figure>
-
       <figure>
-        <img
-          src="images/picture8.png"
-          alt="RECEPTION OVERVIEW 1c"
-          class="lavinda-image"
-        />
-        <figcaption class="image-caption">
-          RECEPTION OVERVIEW 1c
-        </figcaption>
+        <img src="images/picture8.png" alt="Reception Overview 1c" class="lavinda-image" />
+        <figcaption class="image-caption">RECEPTION OVERVIEW 1c</figcaption>
       </figure>
-
       <figure>
-        <img
-          src="images/picture9.png"
-          alt="Car park with 33KVA generator"
-          class="lavinda-image"
-        />
-        <figcaption class="image-caption">
-          A SECTION OF THE CAR PARK SHOWING 33KVA STANDBY SOUND-PROOF GENERATOR
-        </figcaption>
+        <img src="images/picture9.png" alt="Car park with 33KVA generator" class="lavinda-image" />
+        <figcaption class="image-caption">A SECTION OF THE CAR PARK SHOWING 33KVA STANDBY SOUND-PROOF GENERATOR</figcaption>
       </figure>
-
       <figure>
-        <img
-          src="images/picture10.png"
-          alt="Lavinda Eye Hospital Overview (1a)"
-          class="lavinda-image"
-        />
-        <figcaption class="image-caption">
-          LAVINDA EYE SPECIALIST HOSPITAL AND LASER CENTRE OVERVIEW (1a)
-        </figcaption>
+        <img src="images/picture10.png" alt="Lavinda Eye Hospital Overview (1a)" class="lavinda-image" />
+        <figcaption class="image-caption">LAVINDA EYE SPECIALIST HOSPITAL AND LASER CENTRE OVERVIEW (1a)</figcaption>
       </figure>
-
       <figure>
-        <img
-          src="images/picture11.png"
-          alt="Lavinda Eye Hospital Overview (1b)"
-          class="lavinda-image"
-        />
-        <figcaption class="image-caption">
-          LAVINDA EYE SPECIALIST HOSPITAL AND LASER CENTRE OVERVIEW (1b)
-        </figcaption>
+        <img src="images/picture11.png" alt="Lavinda Eye Hospital Overview (1b)" class="lavinda-image" />
+        <figcaption class="image-caption">LAVINDA EYE SPECIALIST HOSPITAL AND LASER CENTRE OVERVIEW (1b)</figcaption>
       </figure>
-
       <figure>
-        <img
-          src="images/picture12.png"
-          alt="Lavinda Eye Hospital Overview (1c)"
-          class="lavinda-image"
-        />
-        <figcaption class="image-caption">
-          LAVINDA EYE SPECIALIST HOSPITAL AND LASER CENTRE OVERVIEW (1c)
-        </figcaption>
+        <img src="images/picture12.png" alt="Lavinda Eye Hospital Overview (1c)" class="lavinda-image" />
+        <figcaption class="image-caption">LAVINDA EYE SPECIALIST HOSPITAL AND LASER CENTRE OVERVIEW (1c)</figcaption>
       </figure>
     </div>
 
-    <!-- 7. Personnel (From PDF) -->
+    <!-- 7. Personnel -->
     <div class="content-section">
       <h2>PERSONNEL</h2>
       <p>
-        The hospital’s administration is well structured with very competent personnel at the helm of affairs. This group of 
-        competent personnel is headed by a consultant Ophthalmologist. There are other categories of eye care professionals 
-        like Optometrists, Opticians, Nurses, etc.
+        The hospital’s administration is well structured with very competent personnel at the helm. This team is led by a Consultant Ophthalmologist and includes optometrists, opticians, nurses, and administrative staff.
       </p>
       <p><strong>Contacts –</strong></p>
       <ul>
-        <li>
-          <strong>Rev. Dr. Alex AtamahPepple</strong><br>
-          MB;BS FMCOphth. FICS <br>
-          07035301943, 08023298145
-        </li>
-        <li>
-          <strong>Dr. Sandra Nwozo</strong><br>
-          O.D, MNOA, Optometrist <br>
-          08057436850
-        </li>
-        <li>
-          <strong>Maureen Okokoro</strong><br>
-          B.Sc. Biochemistry, Head of Administration <br>
-          08037614619
-        </li>
+        <li><strong>Rev. Dr. Alex AtamahPepple</strong><br>MB;BS FMCOphth, FICS<br>07035301943, 08023298145</li>
+        <li><strong>Dr. Sandra Nwozo</strong><br>O.D, MNOA (Optometrist)<br>08057436850</li>
+        <li><strong>Maureen Okokoro</strong><br>B.Sc. Biochemistry, Head of Administration<br>08037614619</li>
       </ul>
     </div>
 
@@ -415,54 +341,36 @@
     <div class="content-section">
       <h3>ORGANIZATIONAL STRUCTURE AND MANAGEMENT</h3>
       <p>
-        The organizational structure of Lavinda eye specialist hospital takes into 
-        cognizance the efficiency in goal achievement, quality, speed, accuracy and 
-        ultimately, customer satisfaction.
+        The organizational structure of Lavinda Eye Specialist Hospital ensures efficient goal achievement, quality, speed, accuracy, and customer satisfaction.
       </p>
       <p>
-        The Lavinda eye specialist hospital is organized thus:
+        The structure is organized with the Medical Director at the top, followed by Finance Manager, Admin Manager, Ophthalmologists, and specialized staff such as Optometrists, Nurses, and Opticians.
       </p>
       <figure>
-        <img 
-          src="images/picture13.png"
-          alt="Organizational Chart"
-          class="lavinda-image"
-        />
-        <figcaption class="image-caption">
-          Sample Organizational Chart Layout
-        </figcaption>
+        <img src="images/picture13.png" alt="Organizational Chart" class="lavinda-image" />
+        <figcaption class="image-caption">Sample Organizational Chart Layout</figcaption>
       </figure>
-      <p>
-        (MEDICAL DIRECTOR at the top, followed by FINANCE MANAGER, ADMIN MANAGER, OPHTHALMOLOGISTS, 
-        then specialized staff such as OPTOMETRISTS, NURSES, OPTICIANS, etc.)
-      </p>
     </div>
 
     <!-- 9. Clinic Hours & Location -->
     <div class="content-section">
       <h2>CLINIC HOURS</h2>
       <p>
-        Monday – Friday: 8am – 6pm <br>
-        Saturdays: 8am – 2pm <br>
-        Public holidays: 8am – 4pm <br>
-        Emergency services: 24 hours (The Medical Director lives within the hospital area)
+        Monday – Friday: 8 AM – 6 PM<br>
+        Saturdays: 8 AM – 2 PM<br>
+        Public Holidays: 8 AM – 4 PM<br>
+        Emergency Services: 24 hours (The Medical Director lives within the hospital area)
       </p>
       <h4>LOCATION</h4>
       <p>
-        Lavinda eye specialist hospital is located at Omubor close, Off Campbell Avenue by Somitel Hotel, 
-        off Peter Odili Road [Trans-Amadi], Port Harcourt.
+        Lavinda Eye Specialist Hospital is located at Omubor Close, Off Campbell Avenue by Somitel Hotel, off Peter Odili Road (Trans-Amadi), Port Harcourt.
       </p>
     </div>
 
-  </div> <!-- /container -->
+  </div> <!-- End Container -->
 
-  <!-- jQuery, Bootstrap JS -->
-  <!-- No 'integrity' or 'crossorigin' to avoid SRI mismatch -->
-  <script
-    src="https://code.jquery.com/jquery-3.5.1.min.js">
-  </script>
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js">
-  </script>
+  <!-- jQuery, Bootstrap JS (CDN) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
